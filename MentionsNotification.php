@@ -28,7 +28,7 @@ class MentionsNotification extends Mentions
 	public function __construct()
 	{
 		Mentions::__construct();
-		$this->mail = e107::getEmail();
+	//	$this->mail = e107::getEmail();
 	}
 
 
@@ -398,7 +398,7 @@ class MentionsNotification extends Mentions
 	 */
 	private function dispatchEmail()
 	{
-		$mail = $this->mail;
+				$mail = e107::getEmail();  
 
 		$emailContent = [
 			'email_subject' =>  $this->emailSubject(),
